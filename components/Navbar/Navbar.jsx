@@ -15,7 +15,7 @@ function Navbar() {
           <Link href="/" className={styles.nav_links}>
             <p>Home</p>
           </Link>
-          <Link href="/" className={styles.nav_links}>
+          <Link href="/resort" className={styles.nav_links}>
             <p>Resort</p>
           </Link>
           <Link href="/" className={styles.nav_links}>

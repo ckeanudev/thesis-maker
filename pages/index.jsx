@@ -11,6 +11,7 @@ import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { bestSeller } from "./api/dataResort";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Footer from "../components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -87,8 +88,14 @@ export default function Home() {
               );
             })}
           </div>
+
+          <h3 className={styles.h3_location_map}>Location Map</h3>
+          <div className={styles.google_map}>
+            <p>Google Map</p>
+          </div>
         </div>
       </main>
+      <Footer />
     </motion.div>
   );
 }
