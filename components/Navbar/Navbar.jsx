@@ -24,12 +24,12 @@ function Navbar() {
           <Link href="/" className={styles.nav_links}>
             <p>Contact Us</p>
           </Link>
-          <Link href="/" className={styles.nav_links}>
+          <Link href="/signin" className={styles.nav_links}>
             <p>Sign In</p>
           </Link>
-          <Link href="/" className={styles.nav_links}>
+          {/* <Link href="/sign" className={styles.nav_links}>
             <p>Sign Up</p>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </nav>

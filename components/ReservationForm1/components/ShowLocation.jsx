@@ -106,6 +106,11 @@ function ShowLocation({
                   locationName: typeFormLocation,
                   price: price,
                   time: time,
+                  extraPillow: 0,
+                  extraFoamBed: 0,
+                  extraBlanket: 0,
+                  extraTowel: 0,
+                  extraKaraoke: 0,
                 },
               ]);
             }}

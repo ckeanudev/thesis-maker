@@ -1,10 +1,32 @@
 .reservation_container {
   width: 100%;
-  padding: 20px 10px 10px;
+  padding: 20px 12px 10px;
 }
 
 .reservation_container h1 {
   text-align: center;
   font-size: 22px;
   margin-bottom: 10px;
+}
+
+.top_button_container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  margin-bottom: 15px;
+}
+
+.top_button_container button {
+  display: flex;
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  color: #1D3557;
+}
+
+.top_button_container button:hover {
+  color: #457B9D;
+
 }

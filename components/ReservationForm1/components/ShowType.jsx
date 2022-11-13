@@ -12,6 +12,7 @@ function ShowType({ setShowType, setTypeForm, setShowMainForm }) {
           onClick={() => {
             setTypeForm("Room");
             setShowMainForm(true);
+            setShowType(false);
           }}
         >
           Room
@@ -21,6 +22,7 @@ function ShowType({ setShowType, setTypeForm, setShowMainForm }) {
           onClick={() => {
             setTypeForm("Cottage");
             setShowMainForm(true);
+            setShowType(false);
           }}
         >
           Cottage

@@ -1,0 +1,63 @@
+.outer_reservation_part3_container {
+    /* position: relative; */
+}
+
+.succeed_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.succeed_container button {
+    background-color: #457B9D;
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    margin-top: 20px;
+    color: #fff;
+}
+.succeed_container button:hover {
+    background-color: #A8DADC;
+}
+
+
+/* --------------------------------------------------------------------------------- */
+
+.loading_container {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .please_wait {
+    margin: 20px 0px;
+    color: #6C757D
+  }
+  
+  .loading_spin {
+    font-size: 40px;
+    display: flex;
+    color: #D90429;
+    -webkit-animation: spin 1s linear infinite; /* Safari */
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

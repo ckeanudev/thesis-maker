@@ -3,6 +3,12 @@ import Head from "next/head";
 import styles from "../styles/Reservation.module.css";
 import ReservationPart1 from "../components/ReservationForm1/ReservationPart1";
 import { motion } from "framer-motion";
+import ReservationPart2 from "../components/ReservationForm2/ReservationPart2";
+import {
+  BsFillArrowLeftCircleFill,
+  BsFillArrowRightCircleFill,
+} from "react-icons/bs";
+import ReservationPart3 from "../components/ReservationForm3/ReservationPart3";
 
 function reservation() {
   const [addList, SetAddList] = useState([]);
@@ -13,10 +19,10 @@ function reservation() {
   const [adult, setAdult] = useState(0);
   const [child, setChild] = useState(0);
   const [price, setPrice] = useState(0);
-  const [time, setTime] = useState("js");
+  const [time, setTime] = useState("");
 
-  const [showPart1, setShowPart1] = useState(false);
-  const [showPart2, setShowPart2] = useState(true);
+  const [showPart1, setShowPart1] = useState(true);
+  const [showPart2, setShowPart2] = useState(false);
   const [showPart3, setShowPart3] = useState(false);
 
   return (
@@ -40,28 +46,54 @@ function reservation() {
 
       <h1>Reservation Process</h1>
 
-      <ReservationPart1
-        setShowPart1={setShowPart1}
-        setShowPart2={setShowPart2}
-        addList={addList}
-        SetAddList={SetAddList}
-        typeForm={typeForm}
-        setTypeForm={setTypeForm}
-        typeFormLocation={typeFormLocation}
-        setTypeFormLocation={setTypeFormLocation}
-        checkIn={checkIn}
-        setCheckIn={setCheckIn}
-        checkOut={checkOut}
-        setCheckOut={setCheckOut}
-        adult={adult}
-        setAdult={setAdult}
-        child={child}
-        setChild={setChild}
-        price={price}
-        setPrice={setPrice}
-        time={time}
-        setTime={setTime}
-      />
+      <div className={styles.top_button_container}>
+        {!showPart1 && showPart2 && (
+          <button
+            onClick={() => {
+              setShowPart1(true);
+              setShowPart2(false);
+            }}
+          >
+            <BsFillArrowLeftCircleFill />
+          </button>
+        )}
+      </div>
+
+      {showPart1 && (
+        <ReservationPart1
+          setShowPart1={setShowPart1}
+          setShowPart2={setShowPart2}
+          addList={addList}
+          SetAddList={SetAddList}
+          typeForm={typeForm}
+          setTypeForm={setTypeForm}
+          typeFormLocation={typeFormLocation}
+          setTypeFormLocation={setTypeFormLocation}
+          checkIn={checkIn}
+          setCheckIn={setCheckIn}
+          checkOut={checkOut}
+          setCheckOut={setCheckOut}
+          adult={adult}
+          setAdult={setAdult}
+          child={child}
+          setChild={setChild}
+          price={price}
+          setPrice={setPrice}
+          time={time}
+          setTime={setTime}
+        />
+      )}
+
+      {showPart2 && (
+        <ReservationPart2
+          setShowPart1={setShowPart1}
+          setShowPart2={setShowPart2}
+          setShowPart3={setShowPart3}
+          addList={addList}
+        />
+      )}
+
+      {showPart3 && <ReservationPart3 />}
     </motion.div>
   );
 }

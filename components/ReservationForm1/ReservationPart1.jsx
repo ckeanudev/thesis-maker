@@ -6,6 +6,7 @@ import { BsPlusCircleFill } from "react-icons/bs";
 import ShowType from "./components/ShowType";
 import ShowMainForm from "./components/ShowMainForm";
 import ShowLocation from "./components/ShowLocation";
+import { ImSpinner8 } from "react-icons/im";
 
 function ReservationPart1({
   setShowPart1,
@@ -29,6 +30,8 @@ function ReservationPart1({
   time,
   setTime,
 }) {
+  const [loading, setLoading] = useState(false);
+
   const [showType, setShowType] = useState(false);
   const [showMainForm, setShowMainForm] = useState(false);
   const [showLocation, setShowLocation] = useState(false);
@@ -43,6 +46,20 @@ function ReservationPart1({
     return sumPrice;
   };
 
+  const removeFromList = (listID) => {
+    setLoading(true);
+
+    for (let i = 0; i < addList.length; i++) {
+      if (i == listID) {
+        addList.splice(listID, 1);
+      }
+    }
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 400);
+  };
+
   return (
     <motion.div
       initial={{
@@ -54,7 +71,7 @@ function ReservationPart1({
       transition={{
         duration: 0.6,
       }}
-      className={styles.reservation_part1_container}
+      className={styles.outer_reservation_part1_container}
     >
       {showType && (
         <ShowType
@@ -102,43 +119,56 @@ function ReservationPart1({
         />
       )}
 
-      {addList.map((data, i) => {
-        return (
-          <ReservationItem
-            key={i}
-            data={data}
-            i={i}
-            SetAddList={SetAddList}
-            addList={addList}
-          />
-        );
-      })}
+      {loading && (
+        <div className={styles.loading_container}>
+          <p className={styles.loading_spin}>
+            <ImSpinner8 />
+          </p>
+        </div>
+      )}
 
-      <div
-        className={styles.add_button}
-        onClick={() => {
-          setShowType(true);
-        }}
-      >
-        <p>Click to Add</p>
-        <BsPlusCircleFill />
-      </div>
+      {!loading && (
+        <div className={styles.reservation_part1_container}>
+          {addList.map((data, i) => {
+            return (
+              <ReservationItem
+                key={i}
+                data={data}
+                i={i}
+                SetAddList={SetAddList}
+                addList={addList}
+                removeFromList={removeFromList}
+              />
+            );
+          })}
 
-      <div className={styles.bottom_summary_content}>
-        <h2>Total Amount: ₱ {sumAllPrice()}.00</h2>
-        <button
-          onClick={() => {
-            if (addList.length > 0) {
-              setShowPart1(false);
-              setShowPart2(true);
-            } else {
-              alert("Oops! you need to choose a Room/Cottage.");
-            }
-          }}
-        >
-          Proceed
-        </button>{" "}
-      </div>
+          <div
+            className={styles.add_button}
+            onClick={() => {
+              setShowType(true);
+            }}
+          >
+            <p>Click to Add</p>
+            <BsPlusCircleFill />
+          </div>
+
+          <div className={styles.bottom_summary_content}>
+            <h2>Total Amount: ₱ {sumAllPrice()}.00</h2>
+            <button
+              onClick={() => {
+                if (addList.length > 0) {
+                  setShowPart1(false);
+                  setShowPart2(true);
+                } else {
+                  alert("Oops! you need to choose a Room/Cottage.");
+                }
+              }}
+            >
+              Proceed
+            </button>{" "}
+          </div>
+        </div>
+      )}
     </motion.div>
   );
 }

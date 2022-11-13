@@ -1,0 +1,120 @@
+.signin_content {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.1);
+    padding: 20px 15px;
+    border-radius: 8px;
+    margin: 200px auto 0;
+    transform: translate(-50%, -50%);
+}
+
+.signin_content h1 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.signin_content input {
+    border: none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    background-color: #E9ECEF;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.signin_content button {
+    border: none;
+    border-radius: 5px;
+    padding: 7px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #1D3557;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.signin_content button:hover {
+    background-color: #33517c;
+
+}
+
+.signin_btn_link {
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+}
+
+.signin_btn {
+    margin: 10px 0px 5px;
+}
+
+.signin_google {
+    margin-bottom: 15px;
+}
+
+.signin_content p {
+    text-align: center;
+    font-size: 13px;
+    color: #6C757D;   
+    cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------- */
+
+.signup_content {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.1);
+    padding: 20px 15px;
+    border-radius: 8px;
+    margin: 150px auto 0;
+    transform: translate(-50%, -50%);
+}
+
+.signup_content h1 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.signup_content input {
+    border: none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    background-color: #E9ECEF;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.signup_content button {
+    border: none;
+    border-radius: 5px;
+    padding: 7px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #1D3557;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 15px 0px;
+    cursor: pointer;
+}
+
+.signup_content button:hover {
+    background-color: #33517c;
+
+}
+
+.signup_content p {
+    text-align: center;
+    font-size: 13px;
+    color: #6C757D;   
+    cursor: pointer;
+}

@@ -1,0 +1,83 @@
+.profile_container {
+  
+}
+
+.nav {
+    background-color: #1D3557;
+    position: sticky;
+    top: 0%;
+    margin-bottom: 10px;
+}
+
+.inner_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    max-width: 1366px;
+    padding: 10px 20px;
+}
+
+.inner_nav p {
+    color: #fff;
+    cursor: pointer;
+}
+
+.back_btn {
+    font-size: 30px;
+    display: flex;
+}
+
+.back_btn:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.link_link {
+    text-decoration: none;
+}
+
+.signout_btn {
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+
+.signout_btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.top_profile_content {
+    background-color: #E9ECEF;
+    padding: 20px;
+    border-radius: 10px;  
+    max-width: 1366px;
+    margin: auto;
+}
+
+.user_description {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.user_label label {
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.user_label p {
+    font-size: 16px;
+}
+
+/* -------------------------------------------------------------------------------- */
+
+.middle_profile_content {
+    background-color: #E9ECEF;
+    padding: 20px;
+    border-radius: 10px;  
+    max-width: 1366px;
+    margin: 10px auto;
+    /* height: 500px; */
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    gap: 15px;
+}

@@ -1,0 +1,96 @@
+.outer_reservation_part2_container {
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr;
+    gap: 15px;
+    /* height: 500px; */
+    width: 100%;
+}
+
+.left_part2 {
+    padding: 20px;
+    background-color: #F8F9FA;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    
+}
+
+.right_part2 {
+    background-color: #F8F9FA;    
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.total_price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #DEE2E6;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.top_trans p {
+    margin-top: 20px;
+}
+
+.top_trans button {
+    padding: 5px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.paypal_btn {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #1D3557;
+}
+
+.paypal_btn:hover {
+    background-color: #2a4468;
+
+}
+
+.cash_btn {
+    width: 100%;
+    background-color: #1D3557;
+}
+
+.cash_btn:hover {
+    background-color: #2a4468;
+}
+
+.middle_trans {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.middle_trans button {
+    margin-top: 50px;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #ffd60a;
+    transition: 0.3s ease;
+}
+
+.middle_trans button:hover {
+    background-color: #fadc44;
+    transform: scale(1.1);
+}

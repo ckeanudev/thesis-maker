@@ -2,13 +2,17 @@ import React from "react";
 import styles from "./ReservationItem.module.css";
 import { BsTrashFill } from "react-icons/bs";
 
-function ReservationItem({ data, i, addList, SetAddList }) {
+function ReservationItem({ data, i, addList, SetAddList, removeFromList }) {
   return (
     <div className={styles.reserve_list_item}>
       <div className={styles.top_item}>
         <p>Form {i + 1}</p>
 
-        <button onClick={() => {}}>
+        <button
+          onClick={() => {
+            removeFromList(i);
+          }}
+        >
           <BsTrashFill />
         </button>
       </div>
